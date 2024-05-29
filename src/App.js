@@ -6,7 +6,7 @@ import { faFrown } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 
-function weatherapp() {
+function WeatherApp() {
   const [input, setInput] = useState('');
   const [weather, setWeather] = useState({
     loading: false,
@@ -59,7 +59,7 @@ function weatherapp() {
         .get(url, {
           params: {
             q: input,
-            units: 'metric',
+            units: 'imperial',
             appid: api_key,
           },
         })
@@ -139,4 +139,4 @@ function weatherapp() {
 
 }
 
-export default weatherapp;
+export default WeatherApp;
